@@ -1,4 +1,4 @@
-.main-container {
+#header-container {
     display: flex;
     flex-direction: row;
     
@@ -36,7 +36,6 @@
 
 }
 
-
 .form1{
     padding: 16px; 
     font-family: 'Open Sans', sans-serif;
@@ -47,7 +46,6 @@
     color: rgb(85, 85, 85);
         
 }
-
 
 .form2{
     padding: 16px; 
@@ -145,7 +143,6 @@ input{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     width: 100px;
-    
     
 } 
 
