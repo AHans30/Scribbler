@@ -1,6 +1,5 @@
-var main = document.getElementById('header-container').innerHTML;
-
-var header = '<div class="head-left">' + 
+//div containing header ie 'ScriBBler' heading and subheading and two buttons for sign-up and sign-in buttons
+var heading = '<div class="head-left">' + 
 '<h1 class="heading">ScriBBler</h1>' + 
 'Explore, Imagine, Create' +
 '</div>' +
@@ -11,6 +10,7 @@ var header = '<div class="head-left">' +
 '</div>' +
 '</div>';
 
+//div containing sign-up modal form. As defined in common.css - this is hidden (display:none) by default
 var signUp = '<div id="signup" class="modal1">' +
 '<form class="form1">' +
 '<div class="headmod">' +
@@ -33,6 +33,7 @@ var signUp = '<div id="signup" class="modal1">' +
 '</form>' +
 '</div>';
 
+//div containing sign-in modal form. As defined in common.css - this is hidden (display:none) by default
 var signIn = '<div id="signin" class="modal">' +
 '<form class="form1">' +
 '<div class="headmod">' +
@@ -52,14 +53,20 @@ var signIn = '<div id="signin" class="modal">' +
 '</form>' +
 '</div>';
 
-document.getElementById('header-container').innerHTML = header + signUp + signIn + document.getElementById('header-container').innerHTML;
+//we define a div containing elements of header ie heading + sign up modal + sign in modal
+const headerContainer = document.createElement("div");
+headerContainer.id = "header-container";
+headerContainer.innerHTML = heading + signUp + signIn;
+document.body.prepend(headerContainer);
 
+//Function to toggle sign up modal from display:none to display:block or vice-versa
 function toggleSignUp(displayMode) {
     toggleSignIn('none');
     var modal = document.getElementById('signup');
     modal.style.display = displayMode;
 }
 
+//Function to toggle sign in modal from display:none to display:block or vice-versa
 function toggleSignIn(displayMode) {
     var modal = document.getElementById('signin');
     modal.style.display = displayMode;
