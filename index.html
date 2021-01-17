@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
+        <title>ScriBBler</title>
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles/common.css"/>
+        <link rel="stylesheet" href="./styles/common.css">
+        <link rel="stylesheet" href="./styles/index.css">
         <!-- TODO: Include Font Awesome file here -->
         <!-- TODO: Include Google Fonts file here -->
         <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-
         <!-- Add background to entire homepage -->
         <style>
             body {
@@ -20,15 +21,57 @@
             }
         </style>
         <script src="https://use.fontawesome.com/aeac629d4e.js"></script>
-
     </head>
-
     <body>
         <!-- TODO: Include all your code for the header and home page here -->
         <!-- header-container div is populated by common.js (with heading, subheading, buttons and modal forms
             and styled by common.css-->
-        
-
-    </body>
-    <script src="./scripts/common.js" ></script>
+        <!--div container for All Posts button-->
+        <div class="container">
+            <button id="all-post-btn" class="buttoncentre">All Posts</button>
+            <button
+                id="create-post-btn"
+                class="buttoncentre"
+                onclick="toggleCreatPost('block')"
+                style="width:auto;"
+            >Create Post</button>
+        </div>
+        <div id="create-post" class="modal2">
+            <form class="form2">
+                <div class="headmod">
+                    <div class="headmodleft">
+                        <h3>Pen Your Post</h3>
+                    </div>
+                    <div class="headmodright">
+                        <i
+                            class="fa fa-times"
+                            style="display:flex; align-self:flex-end;"
+                            aria-hidden="true"
+                            onclick="toggleCreatPost('none')"
+                        ></i>
+                    </div>
+                </div>
+                <div class="modbody">
+                    <label>
+                        <b>Title</b>
+                    </label>
+                    <input type="text" placeholder="Enter title of your post" required>
+                    <label>
+                        <b>Contents</b>
+                    </label>
+                    <textarea
+                        placeholder="Enter the contents of your post"
+                        rows="20%"
+                        cols="100%"
+                        style="border: 0px; background-color: rgb(233, 233, 233); font-family: 'Open Sans', sans-serif; font-weight: bold; padding-left: 10px; padding-top: 10px;"
+                    ></textarea>
+                    <button class="buttonmodal1">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/common.js"></script>
 </html>
