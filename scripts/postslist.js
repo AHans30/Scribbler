@@ -85,7 +85,7 @@ function deletePost () {
     .getElementById('no-post-btn')
     .getAttribute('delete-post-id')
     .slice(7)
-  console.log(id)
+  //console.log(id)
   document.getElementById(id).remove()
   hideDeletePostForm()
 }
