@@ -34,7 +34,7 @@ var posts = [
 ]
 
 //Function to add / populate all posts in postlist.html
-function addPosts () {
+function addPosts() {
   posts.forEach(function (value, index) {
     var postId = 'post_' + index
     var post =
@@ -55,9 +55,7 @@ function addPosts () {
       value.postContent +
       '</div>' +
       '<div class="post-footer">' +
-      '<i class="fa fa-ellipsis-h eplisis-icon" onclick="showMorePost(' +
-      postId +
-      ')"></i>' +
+      '<i class="fa fa-ellipsis-h eplisis-icon" onclick="showMorePost()"></i>' +
       '</div>' +
       '</div>' +
       '</div>'
@@ -69,7 +67,7 @@ function addPosts () {
 addPosts()
 
 //function to show delete post form / modal
-function showDeletePostForm (post) {
+function showDeletePostForm(post) {
   var id = 'delete_' + post.id
 
   //Storing post id to be deleted in a user-defined metadata attribute called 'delete-post-id'
@@ -79,7 +77,7 @@ function showDeletePostForm (post) {
 }
 
 //function to delete post. Post ID to be deleted taken from user defined metadata attribute 'delete-post-id'
-function deletePost () {
+function deletePost() {
   //Extracting the post id to be deleted from the metadata attribute 'delete-post-id'
   var id = document
     .getElementById('no-post-btn')
@@ -91,10 +89,11 @@ function deletePost () {
 }
 
 //This function hides the delete post modal by setting display to 'none'
-function hideDeletePostForm () {
+function hideDeletePostForm() {
   document.getElementById('delete-post-modal').style.display = 'none'
 }
 
-function showMorePost () {
+//Function to redirect user to post.html on clicking ellipsis (...)
+function showMorePost() {
   location.href = 'post.html'
 }
