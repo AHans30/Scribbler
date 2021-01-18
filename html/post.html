@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ScriBBler - Post</title>
+        <!-- TODO: Include Font Awesome file here -->
+        <!-- TODO: Include Google Fonts file here -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/common.css">
+        <link rel="stylesheet" href="../styles/post.css">
+        <!-- TODO: Include Font Awesome file here -->
+        <script src="https://use.fontawesome.com/aeac629d4e.js"></script>
+        <!-- TODO: Include Google Fonts file here -->
+        <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/aeac629d4e.js"></script>
+    </head>
+    <body style="background-color:white">
+        <div class="blog-main-container">
+            <div class="blog-title" id="blog-title" contenteditable="false">
+                The 5 factors that will determine the shape of the Indian economy in 2021
+            </div>
+            <div class="post-author-div">
+                <div class="post-author">Abhimanyu Hans</div>
+                <button class="post-edit" id="post-edit" onclick="toggleEditSaveMode()">Edit
+                    <i style="font-size: 14px;" class="fa fa-edit" id="edit-save-icon"></i>
+                </button>
+            </div>
+    
+            <div class="post-body" id="post-body">
+                An array of studies shows antibodies in a large fraction of the population, 
+                with the corresponding decline in the number of people who are susceptible, 
+                thus slowing down the pandemic. Anecdotal evidence shows sharp gains — for example, 
+                there have now been days in Mumbai with zero deaths attributed to Covid-19 in the official data. 
+                The spread of the virus has slowed down in almost all major states of India, with the reproduction 
+                rate falling below one. Vaccine production has started on a large scale everywhere, and many in 
+                India will now be able to get vaccinated. This will further help reduce the number of people who 
+                are susceptible to Covid-19. Every day, more people are getting comfortable about the dangers, 
+                and are increasing their economic activity.
+            </div>
+
+            <div>
+                <button id="like-post" onclick="incrementLikeCounter()" class="like-post-btn">
+                    <!-- On first like - the 'Like' icon changes to 'Liked!' icone dynamically 
+                    using incrementLikeCounter() function in post.js -->
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"> Like</i>
+                </button>
+            </div>
+            <!-- Like counter's text is populated by displayLikeCounter() function in 
+                post.js file - as per requirement. The counter is updated dynamically on clicking like button. -->
+            <span class="like-count-text" id="like-counter" ></span>
+
+            <div class="comment-text-area">
+                <textarea rows="5" cols="120" placeholder="Leave a comment..." id="userComments" value=""></textarea>
+                <br>
+                <button id="add-comment" class="add-comment-btn" onclick="addComment()">Comment</button>
+            </div>
+
+            <div class="all-comments-text">All Comments</div>
+            <div id="add-comments-to-list" class="comment-text"></div>
+    </div>
+    </body>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+</html>
