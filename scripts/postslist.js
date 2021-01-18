@@ -90,6 +90,7 @@ function deletePost () {
   hideDeletePostForm()
 }
 
+//This function hides the delete post modal by setting display to 'none'
 function hideDeletePostForm () {
   document.getElementById('delete-post-modal').style.display = 'none'
 }
